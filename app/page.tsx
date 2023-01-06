@@ -1,91 +1,33 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from './page.module.css'
 
-const inter = Inter({ subsets: ['latin'] })
-
 export default function Home() {
+
+  const text = `Guter Allgemein- und normalgewichtiger Ernährungszustand.
+Körpergröße: 180 cm. Körpergewicht: 80 kg. BMI: 24,7.
+Herzaktion rhythmisch. Herztöne: rein. Keine Herzgeräusche
+Lunge: vesikuläres Atemgeräusch. Sonorer Klopfschall.
+Abdomen: Abdomen weich, gut eindrückbar, kein Druckschmerz, lebhafte Darmgeräusche über allen vier Quadranten, keine tastbaren Resistenzen. Leber und Milz nicht vergrößert palpabel.
+Nierenlager nicht klopfschmerzhaft.
+Wirbelsäule in der Längsachse gerade. Wirbelsäule nicht klopfschmerzhaft.
+Lymphknoten cervikal, nuchal, axillär und inguinal beidseits nicht vergrößert tastbar.
+Mundschleimhaut feucht und gut durchblutet. Rachenschleimhaut unauffällig.
+Schilddrüse: nicht vergrößert palpabel.
+Fußpulse bds. sicher tastbar.
+Unterschenkel bds.: keine Thrombosezeichen. Keine Ödeme.`;
+
+  const text_neuro = `Orientierende neurologische Untersuchung:
+Zu allen Qualitäten voll orientiert. Kein Meningismus.
+Beidseits kein Druckschmerz über den trigeminalen Austrittspunkten. Pupillen isokor, mittelweit. Direkte und indirekte Lichtreaktion prompt und seitengleich. Keine Augenmuskelparesen.
+Keine Dysarthrie. Keine Dysphagie. Keine Aphasie.
+Finger-Nase-Versuch bds. metrisch. Eudiadochokinese.
+Berührungssensibilität allseits intakt.
+Beidseits kein Tremor.
+Keine Hinweise auf ein fokal neurologisches Defizit.`
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <textarea defaultValue={text} rows={12} />
+      <textarea defaultValue={text_neuro} rows={8}/>
     </main>
   )
 }
